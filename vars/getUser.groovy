@@ -1,4 +1,4 @@
-def call(string username = "null" , string designation = "null") {
+def call(string username = "null", string designation = "null") {
   echo "this is a test shared library setup"
   pipeline {
     environment {
@@ -7,11 +7,11 @@ def call(string username = "null" , string designation = "null") {
     }
     agent any
     stages {
-      stage ( "Print" ) {
+      stage ("Print") {
         steps {
           echo " Hi ${USER_NAME}, Your Designation is ${DESIGNATION}" 
         }
       }
     }
-}
+  }
 }
